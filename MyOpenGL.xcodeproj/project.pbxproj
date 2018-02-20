@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0C022D94203BC2D9008F96B0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C022D93203BC2D9008F96B0 /* main.cpp */; };
+		0C022D9C203BC2FD008F96B0 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C022D9B203BC2FD008F96B0 /* OpenGL.framework */; };
+		0C022D9E203BC332008F96B0 /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C022D9D203BC332008F96B0 /* libGLEW.2.1.0.dylib */; };
+		0C022DA0203BC35C008F96B0 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C022D9F203BC35C008F96B0 /* libglfw.3.2.dylib */; };
+		0C022DA9203BCF49008F96B0 /* libassimp.4.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C022DA8203BCF49008F96B0 /* libassimp.4.1.0.dylib */; };
+		0C022DAC203BD4E7008F96B0 /* res in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0C022DAA203BD42C008F96B0 /* res */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +25,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		0C022DAB203BD4C6008F96B0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				0C022DAC203BD4E7008F96B0 /* res in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0C022D90203BC2D9008F96B0 /* MyOpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyOpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C022D93203BC2D9008F96B0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0C022D9B203BC2FD008F96B0 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		0C022D9D203BC332008F96B0 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../../../usr/local/Cellar/glew/2.1.0/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
+		0C022D9F203BC35C008F96B0 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
+		0C022DA1203BCAE1008F96B0 /* Mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
+		0C022DA4203BCD31008F96B0 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		0C022DA5203BCD62008F96B0 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		0C022DA6203BCDAD008F96B0 /* Camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		0C022DA7203BCE19008F96B0 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		0C022DA8203BCF49008F96B0 /* libassimp.4.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.4.1.0.dylib; path = ../../../../../../usr/local/Cellar/assimp/4.1.0/lib/libassimp.4.1.0.dylib; sourceTree = "<group>"; };
+		0C022DAA203BD42C008F96B0 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +57,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C022DA9203BCF49008F96B0 /* libassimp.4.1.0.dylib in Frameworks */,
+				0C022DA0203BC35C008F96B0 /* libglfw.3.2.dylib in Frameworks */,
+				0C022D9E203BC332008F96B0 /* libGLEW.2.1.0.dylib in Frameworks */,
+				0C022D9C203BC2FD008F96B0 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +72,7 @@
 			children = (
 				0C022D92203BC2D9008F96B0 /* MyOpenGL */,
 				0C022D91203BC2D9008F96B0 /* Products */,
+				0C022D9A203BC2FD008F96B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +87,26 @@
 		0C022D92203BC2D9008F96B0 /* MyOpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				0C022DAA203BD42C008F96B0 /* res */,
 				0C022D93203BC2D9008F96B0 /* main.cpp */,
+				0C022DA7203BCE19008F96B0 /* Model.h */,
+				0C022DA1203BCAE1008F96B0 /* Mesh.h */,
+				0C022DA5203BCD62008F96B0 /* stb_image.h */,
+				0C022DA4203BCD31008F96B0 /* Shader.h */,
+				0C022DA6203BCDAD008F96B0 /* Camera.h */,
 			);
 			path = MyOpenGL;
+			sourceTree = "<group>";
+		};
+		0C022D9A203BC2FD008F96B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C022DA8203BCF49008F96B0 /* libassimp.4.1.0.dylib */,
+				0C022D9F203BC35C008F96B0 /* libglfw.3.2.dylib */,
+				0C022D9D203BC332008F96B0 /* libGLEW.2.1.0.dylib */,
+				0C022D9B203BC2FD008F96B0 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,6 +119,7 @@
 				0C022D8C203BC2D9008F96B0 /* Sources */,
 				0C022D8D203BC2D9008F96B0 /* Frameworks */,
 				0C022D8E203BC2D9008F96B0 /* CopyFiles */,
+				0C022DAB203BD4C6008F96B0 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -233,6 +281,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					./include/glm,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/2.1.0/lib,
+					/usr/local/Cellar/glfw/3.2.1/lib,
+					/usr/local/Cellar/assimp/4.1.0/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -241,6 +299,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					./include/glm,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/2.1.0/lib,
+					/usr/local/Cellar/glfw/3.2.1/lib,
+					/usr/local/Cellar/assimp/4.1.0/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
